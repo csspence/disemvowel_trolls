@@ -11,6 +11,20 @@ Note: for this kata y isn't considered a vowel.
 
 */
 
-function disemvowel(str) {
-  return str;
+const disemvowel = (str) => {
+  let newStr = '';
+  const vowels = {
+    a : true,
+    e : true,
+    i : true,
+    o : true,
+    u : true
+  }
+  for(let i = 0; i < str.length; i++) {
+    if(vowels[str[i].toLowerCase()] !== true) {
+      newStr += str[i];
+    }
+  }
+
+  return newStr;
 }
